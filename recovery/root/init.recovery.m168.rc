@@ -1,0 +1,8 @@
+on init
+    # Ensure EFS directories exist
+    mkdir /efs
+    mkdir /sec_efs
+
+    # Minimal permissions for watchdog / other device nodes
+    chown system root /proc/cpwcn/wdtirq
+    chmod 766 /proc/cpwcn/wdtirq
