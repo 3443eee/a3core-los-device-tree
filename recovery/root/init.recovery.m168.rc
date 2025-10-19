@@ -1,8 +1,15 @@
-on init
-    # Ensure EFS directories exist
-    mkdir /efs
-    mkdir /sec_efs
+# Minimal LOS recovery init
 
-    # Minimal permissions for watchdog / other device nodes
-    chown system root /proc/cpwcn/wdtirq
-    chmod 766 /proc/cpwcn/wdtirq
+on init
+    # create recovery directories
+    mkdir /cache
+    mkdir /tmp
+    mkdir /data
+
+on post-fs
+    # set permissions for recovery directories
+    chmod 0777 /cache
+    chmod 0777 /tmp
+    chmod 0777 /data
+
+# you can add more recovery mounts if needed
