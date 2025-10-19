@@ -1,10 +1,8 @@
-# Minimal LOS recovery device makefile
+# device/samsung/a3core/los_a3core.mk
 PRODUCT_NAME := los_a3core
-PRODUCT_MODEL := "Galaxy A03 Core"
-PRODUCT_BRAND := "Samsung"
 PRODUCT_DEVICE := a3core
-PRODUCT_SO := a3core
-PRODUCT_RECOVERY_IMAGE := true
+PRODUCT_BRAND := samsung
+PRODUCT_MODEL := "Galaxy A03 Core"
 
-# Use the BoardConfig.mk from this device tree
+# THIS IS CRUCIAL — must point to the local BoardConfig.mk
 include $(LOCAL_DIR)/BoardConfig.mk

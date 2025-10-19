@@ -14,7 +14,6 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/los_a3core.mk
+PRODUCT_MAKEFILES := $(LOCAL_DIR)/los_a3core.mk
 
 COMMON_LUNCH_CHOICES := los_a3core-eng
